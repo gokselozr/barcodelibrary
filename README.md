@@ -6,4 +6,8 @@ And this is not final version.
 
 Have a nice day :)
 
-Copyrigth gokselozr
+License rights are reserved.
+Los derechos de licencia están reservados.
+Les droits de licence sont réservés.
+Лицензионные права защищены.
+Lisans hakları saklıdır.
