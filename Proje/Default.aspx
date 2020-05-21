@@ -57,17 +57,17 @@
     <form id="form1" runat="server">
         <div id="main">
             <div id="header">
-                <p id="head">Abdulkadir VURGUN</p>
+                <p id="head">Barcode Library</p>
             </div>
             <table id="table" border="0">
                 <tr>
-                    <th colspan="2">Giriş Yöntemi Seçiniz</th>
+                    <th colspan="2">Choose Entrance Way</th>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="lblPanelKullanici" runat="server" onclick="Kullanici()">Kullanıcı Panel</asp:Label></td>
+                        <asp:Label ID="lblPanelKullanici" runat="server" onclick="Kullanici()">User Panel</asp:Label></td>
                     <td>
-                        <asp:Label ID="lblPanelYonetici" runat="server" onclick="Yonetici()">Yönetici Panel</asp:Label>
+                        <asp:Label ID="lblPanelYonetici" runat="server" onclick="Yonetici()">Admin Panel</asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -84,10 +84,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="btnPanelKullanici" runat="server" Text="Giriş" OnClick="btnPanelKullanici_Click" CssClass="button"></asp:Button>
+                        <asp:Button ID="btnPanelKullanici" runat="server" Text="Enter" OnClick="btnPanelKullanici_Click" CssClass="button"></asp:Button>
                     </td>
                     <td>
-                        <asp:Button ID="btnPanelYonetici" runat="server" Text="Giriş" OnClick="btnPanelYonetici_Click" CssClass="button"></asp:Button></td>
+                        <asp:Button ID="btnPanelYonetici" runat="server" Text="Enter" OnClick="btnPanelYonetici_Click" CssClass="button"></asp:Button></td>
                 </tr>
             </table>
         </div>

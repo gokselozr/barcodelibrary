@@ -14,11 +14,11 @@
             <table>
                 <tr>
                     <td colspan="3">
-                        <asp:Button runat="server" ID="back" CssClass="button back" Text="Geri" OnClick="back_Click"></asp:Button>
+                        <asp:Button runat="server" ID="back" CssClass="button back" Text="Back" OnClick="back_Click"></asp:Button>
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="3" class="th">Kitap Arama</th>
+                    <th colspan="3" class="th">Search Book</th>
                 </tr>
                 <tr>
                     <td>
@@ -28,7 +28,7 @@
                         <asp:TextBox runat="server" ID="txtNameS" CssClass="textbox" />
                     </td>
                     <td>
-                        <asp:Button runat="server" Text="Ara" ID="btnSearch" OnClick="btnSearch_Click" CssClass="button"></asp:Button>
+                        <asp:Button runat="server" Text="Search" ID="btnSearch" OnClick="btnSearch_Click" CssClass="button"></asp:Button>
                     </td>
                 </tr>
                 <tr>
@@ -36,9 +36,9 @@
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="GridView">
                             <Columns>
                                 <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
-                                <asp:BoundField DataField="KITAP_ADI" HeaderText="Kitap Adı" SortExpression="KITAP_ADI" />
-                                <asp:BoundField DataField="YAZAR" HeaderText="Yazarın Adı" SortExpression="YAZAR" />
-                                <asp:ImageField DataImageUrlField="KITAP_FOTO" HeaderText="Kitap Kapak Fotoğrafı" SortExpression="KITAP_FOTO" ControlStyle-Height="60px">
+                                <asp:BoundField DataField="KITAP_ADI" HeaderText="Book Name" SortExpression="KITAP_ADI" />
+                                <asp:BoundField DataField="YAZAR" HeaderText="Author Name" SortExpression="YAZAR" />
+                                <asp:ImageField DataImageUrlField="KITAP_FOTO" HeaderText="Book Photo" SortExpression="KITAP_FOTO" ControlStyle-Height="60px">
                                 </asp:ImageField>
                             </Columns>
                         </asp:GridView>
@@ -47,7 +47,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th class="th" colspan="3">Kitap Alma</th>
+                    <th class="th" colspan="3">Take Book</th>
                 </tr>
                 <tr>
                     <td>
@@ -57,11 +57,11 @@
 
                     </td>
                     <td>
-                        <asp:Button runat="server" ID="btnAl" Text="Kitap Al" OnClick="btnAl_Click" CssClass="button" />
+                        <asp:Button runat="server" ID="btnAl" Text="Take Book" OnClick="btnAl_Click" CssClass="button" />
                     </td>
                 </tr>
                 <tr>
-                    <th class="th" colspan="3">Kitap Verme</th>
+                    <th class="th" colspan="3">Give Book</th>
                 </tr>
                 <tr>
                     <td>
@@ -70,18 +70,18 @@
                         <asp:FileUpload runat="server" CssClass="button" ID="fileUploader2" />
                     </td>
                     <td>
-                        <asp:Button Text="Kitap Ver" ID="btnVer" runat="server" OnClick="btnVer_Click" CssClass="button" /></td>
+                        <asp:Button Text="Give Book" ID="btnVer" runat="server" OnClick="btnVer_Click" CssClass="button" /></td>
                 </tr>
-                <tr><th colspan="3" class="th">Üzerimdeki Kitaplar</th></tr>
+                <tr><th colspan="3" class="th">Taken Books</th></tr>
                 <tr>
                     <td colspan="3">
 
                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" CssClass="GridView">
                             <Columns>
                                 <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
-                                <asp:BoundField DataField="KITAP_ADI" HeaderText="Kitap Adı" SortExpression="KITAP_ADI" />
-                                <asp:BoundField DataField="YAZAR" HeaderText="Yazarın Adı" SortExpression="YAZAR" />
-                                <asp:ImageField DataImageUrlField="KITAP_FOTO" SortExpression="KITAP_FOTO" HeaderText="Kitap Kapak Fotoğrafı" ControlStyle-Height="60px">
+                                <asp:BoundField DataField="KITAP_ADI" HeaderText="Book Name" SortExpression="KITAP_ADI" />
+                                <asp:BoundField DataField="YAZAR" HeaderText="Author Name" SortExpression="YAZAR" />
+                                <asp:ImageField DataImageUrlField="KITAP_FOTO" SortExpression="KITAP_FOTO" HeaderText="Book Photo" ControlStyle-Height="60px">
                                 </asp:ImageField>
                             </Columns>
                         </asp:GridView>

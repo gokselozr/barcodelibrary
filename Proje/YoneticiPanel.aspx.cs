@@ -119,38 +119,6 @@ namespace Proje
                     BarcodeResult Result = IronBarCode.BarcodeReader.QuicklyReadOneBarcode(bitmap);
                     txtISBN.Text = Result.Text;
                     #endregion
-                    #region Get Data From Json in Web Site
-                    //string subtitle = null;
-                    //string title = null;
-                    //string adres = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + txtISBN.Text;
-                    //WebRequest istek = HttpWebRequest.Create(adres);
-                    //WebResponse cevap;
-                    //cevap = istek.GetResponse();
-                    //StreamReader donenBilgiler = new StreamReader(cevap.GetResponseStream());
-                    //string bilgilerial = donenBilgiler.ReadToEnd();
-                    //dynamic fcknJSON = JsonConvert.DeserializeObject(bilgilerial);
-                    //string[] bookGet = new string[2];
-                    //foreach (var a in fcknJSON.items)
-                    //{
-                    //    int i = 0;
-
-                    //    foreach (var b in a.volumeInfo)
-                    //    {
-
-                    //        if (i <= 1)
-                    //        {
-                    //            bookGet[i] = b.First;
-                    //            i++;
-                    //        }
-                    //        if (i == 2)
-                    //        {
-                    //            break;
-                    //        }
-                    //    }
-                    //}
-                    //title = bookGet[0];
-                    //subtitle = bookGet[1];
-                    #endregion
                     #region Get Data From Web Site
                     var url = "https://www.abebooks.com/servlet/SearchResults?sts=t&isbn=" + txtISBN.Text;
                     var web = new HtmlWeb();
@@ -163,8 +131,6 @@ namespace Proje
                     txtName.Text = value[0].Replace("&#39;", "'");
                     #endregion
                     #region Insert Book into Database
-                    //txtName.Text = title + " " + subtitle;
-                    //txtISBN.Text.Replace(" ", "");
                     SqlCommand command = new SqlCommand("declare @isbn varchar(30); declare @name varchar(100); declare @author varchar(100); declare @image varchar(100);set @name=@namePar;set @isbn =@isbnPar; set @author=@authorPar; set @image=@imagePar;INSERT INTO KITAPLAR VALUES(@isbn, @name, DEFAULT, @author, @image,NULL)", connection);
                     command.Parameters.AddWithValue("@isbnPar", txtISBN.Text);
                     command.Parameters.AddWithValue("@namePar", txtName.Text);
@@ -207,28 +173,7 @@ namespace Proje
             ekle();
 
         }
-
-        //protected void cacheSil_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        #region Delete Images from Folder
-        //        for (int k = 0; k <= i; k++)
-        //        {
-        //            File.Delete(Server.MapPath(@"~/images/") + "image" + k + ".jpg");
-        //        }
-        //        lblUpload.Style.Value = "Color:Green";
-        //        lblUpload.Text = "Silme İşlemi:Başarılı!";
-        //        #endregion
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        lblUpload.Style.Value = "Color:Red";
-        //        lblUpload.Text = "Silme İşlemi:Bir hata oluştu. Bir nedenden dolayı klasördeki dosyaları silemedik.<html></br></html> Hata Mesajı: " + ex.Message;
-        //    }
-
-        //}
-
+        
         protected void barcode_Click(object sender, EventArgs e)
         {
             k++;
